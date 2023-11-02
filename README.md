@@ -41,5 +41,3 @@ const additionalData: Writable<{
 - If you want to add a `No Class` cell, then you have to use `[null]`, you also have options to use `{ colspan: number }`
 - You can change styles in the `additionalData` section, here you will find raw code and relatable options
 - The `cellStyle` object will search the keys in the cells and will add a style which is the keys item
-
-[PWA guide : https://thecodingchannel.hashnode.dev/turn-your-sveltekit-app-into-a-pwa-in-3-simple-steps]
