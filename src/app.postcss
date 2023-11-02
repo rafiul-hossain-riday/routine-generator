@@ -1,0 +1,214 @@
+/*place global styles here */
+html,
+body {
+	height: 100%;
+}
+
+* {
+	outline-color: rgb(var(--color-primary-500) / 1);
+}
+
+:root {
+	/* =~= Theme Properties =~= */
+	--theme-font-family-base: system-ui;
+	--theme-font-family-heading: system-ui;
+	--theme-font-color-base: 0 0 0;
+	--theme-font-color-dark: 255 255 255;
+	--theme-rounded-base: 9999px;
+	--theme-rounded-container: 8px;
+	--theme-border-base: 1px;
+	/* =~= Theme On-X Colors =~= */
+	--on-primary: 0 0 0;
+	--on-secondary: 0 0 0;
+	--on-tertiary: 0 0 0;
+	--on-success: 0 0 0;
+	--on-warning: 0 0 0;
+	--on-error: 0 0 0;
+	--on-surface: 255 255 255;
+	/* =~= Theme Colors  =~= */
+	/* primary | #6f6ebf */
+	--color-primary-50: 233 233 245; /* ⬅ #e9e9f5 */
+	--color-primary-100: 226 226 242; /* ⬅ #e2e2f2 */
+	--color-primary-200: 219 219 239; /* ⬅ #dbdbef */
+	--color-primary-300: 197 197 229; /* ⬅ #c5c5e5 */
+	--color-primary-400: 154 154 210; /* ⬅ #9a9ad2 */
+	--color-primary-500: 111 110 191; /* ⬅ #6f6ebf */
+	--color-primary-600: 100 99 172; /* ⬅ #6463ac */
+	--color-primary-700: 83 83 143; /* ⬅ #53538f */
+	--color-primary-800: 67 66 115; /* ⬅ #434273 */
+	--color-primary-900: 54 54 94; /* ⬅ #36365e */
+	/* secondary | #0FBA81 */
+	--color-secondary-50: 219 245 236; /* ⬅ #dbf5ec */
+	--color-secondary-100: 207 241 230; /* ⬅ #cff1e6 */
+	--color-secondary-200: 195 238 224; /* ⬅ #c3eee0 */
+	--color-secondary-300: 159 227 205; /* ⬅ #9fe3cd */
+	--color-secondary-400: 87 207 167; /* ⬅ #57cfa7 */
+	--color-secondary-500: 15 186 129; /* ⬅ #0FBA81 */
+	--color-secondary-600: 14 167 116; /* ⬅ #0ea774 */
+	--color-secondary-700: 11 140 97; /* ⬅ #0b8c61 */
+	--color-secondary-800: 9 112 77; /* ⬅ #09704d */
+	--color-secondary-900: 7 91 63; /* ⬅ #075b3f */
+	/* tertiary | #0EA5E9 */
+	--color-tertiary-50: 219 242 252; /* ⬅ #dbf2fc */
+	--color-tertiary-100: 207 237 251; /* ⬅ #cfedfb */
+	--color-tertiary-200: 195 233 250; /* ⬅ #c3e9fa */
+	--color-tertiary-300: 159 219 246; /* ⬅ #9fdbf6 */
+	--color-tertiary-400: 86 192 240; /* ⬅ #56c0f0 */
+	--color-tertiary-500: 14 165 233; /* ⬅ #0EA5E9 */
+	--color-tertiary-600: 13 149 210; /* ⬅ #0d95d2 */
+	--color-tertiary-700: 11 124 175; /* ⬅ #0b7caf */
+	--color-tertiary-800: 8 99 140; /* ⬅ #08638c */
+	--color-tertiary-900: 7 81 114; /* ⬅ #075172 */
+	/* success | #36d399 */
+	--color-success-50: 225 248 240; /* ⬅ #e1f8f0 */
+	--color-success-100: 215 246 235; /* ⬅ #d7f6eb */
+	--color-success-200: 205 244 230; /* ⬅ #cdf4e6 */
+	--color-success-300: 175 237 214; /* ⬅ #afedd6 */
+	--color-success-400: 114 224 184; /* ⬅ #72e0b8 */
+	--color-success-500: 54 211 153; /* ⬅ #36d399 */
+	--color-success-600: 49 190 138; /* ⬅ #31be8a */
+	--color-success-700: 41 158 115; /* ⬅ #299e73 */
+	--color-success-800: 32 127 92; /* ⬅ #207f5c */
+	--color-success-900: 26 103 75; /* ⬅ #1a674b */
+	/* warning | #fbbd23 */
+	--color-warning-50: 254 245 222; /* ⬅ #fef5de */
+	--color-warning-100: 254 242 211; /* ⬅ #fef2d3 */
+	--color-warning-200: 254 239 200; /* ⬅ #feefc8 */
+	--color-warning-300: 253 229 167; /* ⬅ #fde5a7 */
+	--color-warning-400: 252 209 101; /* ⬅ #fcd165 */
+	--color-warning-500: 251 189 35; /* ⬅ #fbbd23 */
+	--color-warning-600: 226 170 32; /* ⬅ #e2aa20 */
+	--color-warning-700: 188 142 26; /* ⬅ #bc8e1a */
+	--color-warning-800: 151 113 21; /* ⬅ #977115 */
+	--color-warning-900: 123 93 17; /* ⬅ #7b5d11 */
+	/* error | #f87272 */
+	--color-error-50: 254 234 234; /* ⬅ #feeaea */
+	--color-error-100: 254 227 227; /* ⬅ #fee3e3 */
+	--color-error-200: 253 220 220; /* ⬅ #fddcdc */
+	--color-error-300: 252 199 199; /* ⬅ #fcc7c7 */
+	--color-error-400: 250 156 156; /* ⬅ #fa9c9c */
+	--color-error-500: 248 114 114; /* ⬅ #f87272 */
+	--color-error-600: 223 103 103; /* ⬅ #df6767 */
+	--color-error-700: 186 86 86; /* ⬅ #ba5656 */
+	--color-error-800: 149 68 68; /* ⬅ #954444 */
+	--color-error-900: 122 56 56; /* ⬅ #7a3838 */
+	/* surface | #566676 */
+	--color-surface-50: 230 232 234; /* ⬅ #e6e8ea */
+	--color-surface-100: 221 224 228; /* ⬅ #dde0e4 */
+	--color-surface-200: 213 217 221; /* ⬅ #d5d9dd */
+	--color-surface-300: 187 194 200; /* ⬅ #bbc2c8 */
+	--color-surface-400: 137 148 159; /* ⬅ #89949f */
+	--color-surface-500: 86 102 118; /* ⬅ #566676 */
+	--color-surface-600: 77 92 106; /* ⬅ #4d5c6a */
+	--color-surface-700: 65 77 89; /* ⬅ #414d59 */
+	--color-surface-800: 52 61 71; /* ⬅ #343d47 */
+	--color-surface-900: 42 50 58; /* ⬅ #2a323a */
+	
+}
+
+/* Based on http://kevinburke.bitbucket.org/markdowncss/ */
+
+body{
+    margin: 0 auto;
+    font-family: Georgia, Palatino, serif;
+    color: #444444;
+    line-height: 1;
+    max-width: 960px;
+    padding: 30px;
+}
+h1, h2, h3, h4 {
+    color: #111111;
+    font-weight: 400;
+}
+h1, h2, h3, h4, h5, p {
+    margin-bottom: 24px;
+    padding: 0;
+}
+h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 36px;
+    margin: 24px 0 6px;
+}
+h3 {
+    font-size: 24px;
+}
+h4 {
+    font-size: 21px;
+}
+h5 {
+    font-size: 18px;
+}
+a {
+    color: #0099ff;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+li {
+    line-height: 24px;
+}
+li ul, li ul {
+    margin-left: 24px;
+}
+p, ul, ol {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 540px;
+}
+pre {
+    padding: 0px 24px;
+    max-width: 800px;
+    white-space: pre-wrap;
+}
+code {
+    font-family: Consolas, Monaco, Andale Mono, monospace;
+    line-height: 1.5;
+    font-size: 14px;
+	background: #0002;
+	border-radius: 5px;
+	padding: 2px 3px 3px 3px;
+}
+
+pre code {
+	display: block;
+}
+aside {
+    display: block;
+    float: right;
+    width: 390px;
+}
+blockquote {
+    margin: 1em 2em;
+    max-width: 476px;
+}
+blockquote p {
+    color: #666;
+    max-width: 460px;
+}
+hr {
+    width: 540px;
+    text-align: left;
+    margin: 0 auto 0 0;
+    color: #999;
+}
+table {
+    border-collapse: collapse;
+    margin: 1em 1em;
+    border: 1px solid #CCC;
+}
+table thead {
+    background-color: #EEE;
+}
+table thead td {
+    color: #666;
+}
+table td {
+    padding: 0.5em 1em;
+    border: 1px solid #CCC;
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Routine Generator",
+    "short_name": "Routine Generator",
+    "description": "Routine Generator App",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "theme_color": "#563e87",
+    "background_color": "#454545",
+    "icons": [
+        {
+            "src": "/favicon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/favicon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
